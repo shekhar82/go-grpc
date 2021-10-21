@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package calculator;
+option go_package="calculator/calculatorpb";
+
+
+
+message SumRequest {
+    int32 firstNumber = 1;
+    int32 secondNumber =2;
+}
+
+
+message SubtractRequest {
+    int32 firstNumber = 1;
+    int32 secondNumber =2;
+}
+
+message MultiplyRequest {
+    int32 firstNumber = 1;
+    int32 secondNumber =2;
+}
+
+
+message DivisonRequest {
+    int32 firstNumber = 1;
+    int32 secondNumber =2;
+}
+
+message Result {
+    int32 result = 1;
+}
+
+
+service CalculatorService {
+    rpc Sum(SumRequest) returns (Result) {};
+    rpc Subtract(SubtractRequest) returns (Result) {};
+    rpc Multiply(MultiplyRequest) returns (Result) {};
+    rpc Divide(DivisonRequest) returns (Result) {};
+}
+
+
