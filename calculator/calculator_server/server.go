@@ -47,7 +47,7 @@ func (*server) Multiply(ctx context.Context, req *calculatorpb.MultiplyRequest) 
 	firstNumber := req.FirstNumber
 	secondNumber := req.SecondNumber
 
-	multiplication := firstNumber - secondNumber
+	multiplication := firstNumber * secondNumber
 
 	result := &calculatorpb.Result{
 		Result: multiplication,
